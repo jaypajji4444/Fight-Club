@@ -29,7 +29,7 @@ const authRoutes = require('./routes/auth');
 const questionRoutes=require("./routes/question")
 const resultRoutes=require("./routes/result")
 
-// middleware
+// middleware added
  app.use("/",express.static("Knight"))
  app.use("/distribution",express.static("distribution"))
 
