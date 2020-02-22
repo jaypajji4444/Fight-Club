@@ -1,246 +1,273 @@
 <!DOCTYPE html>
 <html>
-<head> 
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Homepage</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="all,follow">
-  <!-- Bootstrap CSS-->
-  <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
-  <!-- Font Awesome CSS-->
-  <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
-  <!-- Custom Font Icons CSS-->
-  <link rel="stylesheet" href="css/font.css">
-  <!-- Google fonts - Muli-->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700">
-  <!-- theme stylesheet-->
-  <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
-  <!-- Custom stylesheet - for your changes-->
-  <link rel="stylesheet" href="css/custom.css">
-  <!-- Favicon-->
-  <link rel="shortcut icon" href="img/favicon.ico">
-  <!-- Tweaks for older IEs--><!--[if lt IE 9]>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Homepage</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="all,follow">
+    <!-- Bootstrap CSS-->
+    <link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
+    <!-- Font Awesome CSS-->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css">
+    <!-- Custom Font Icons CSS-->
+    <link rel="stylesheet" href="css/font.css">
+    <!-- Google fonts - Muli-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Muli:300,400,700">
+    <!-- theme stylesheet-->
+    <link rel="stylesheet" href="css/style.default.css" id="theme-stylesheet">
+    <!-- Custom stylesheet - for your changes-->
+    <link rel="stylesheet" href="css/custom.css">
+    <!-- Favicon-->
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <!-- Tweaks for older IEs-->
+    <!--[if lt IE 9]>
     <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script><![endif]-->
-    
-    
+
+
     <style>
-      input[type=radio]{
-        width:20px;
-        height:20px;
-        margin:auto;
-        padding:5px
-      }
+        input[type=radio] {
+            width: 20px;
+            height: 20px;
+            margin: auto;
+            padding: 5px
+        }
     </style>
-    
-  </head>
-  <body>
-    <header class="header">   
-      <nav class="navbar navbar-expand-lg">
-        <div class="search-panel">
-          <div class="search-inner d-flex align-items-center justify-content-center">
-            <div class="close-btn">Close <i class="fa fa-close"></i></div>
-            <form id="searchForm" action="#">
-              <div class="form-group">
-                <input type="search" name="search" placeholder="What are you searching for...">
-                <button type="submit" class="submit">Search</button>
-              </div>
-            </form>
-          </div>
-        </div>
-        <div class="container-fluid d-flex align-items-center justify-content-between">
-          <div class="navbar-header">
-            <!-- Navbar Header--><a href="index.html" class="navbar-brand">
-              <div class="brand-text brand-big visible text-uppercase"><strong>Nouristic</strong></div>
-              <div class="brand-text brand-sm"><strong class="text-primary">D</strong><strong>A</strong></div></a>
-            
-              <!-- Sidebar Toggle Btn-->
-              <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button>
-            </div>
-            <div class="right-menu list-inline no-margin-bottom"> 
 
-              <div class="list-inline-item" id="userEmail"></div> 
-              
-              <div class="list-inline-item"><a href="#" class="search-open nav-link"><i class="icon-magnifying-glass-browser"></i></a></div>  
-              <!-- Tasks-->
-              <div class="list-inline-item dropdown"><a id="navbarDropdownMenuLink2" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link tasks-toggle"><i class="icon-new-file"></i><span class="badge dashbg-3">9</span></a>
-                <div aria-labelledby="navbarDropdownMenuLink2" class="dropdown-menu tasks-list"><a href="#" class="dropdown-item">
-                  <div class="text d-flex justify-content-between"><strong>Task 1</strong><span>40% complete</span></div>
-                  <div class="progress">
-                    <div role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" class="progress-bar dashbg-1"></div>
-                  </div></a><a href="#" class="dropdown-item">
-                    <div class="text d-flex justify-content-between"><strong>Task 2</strong><span>20% complete</span></div>
-                    <div class="progress">
-                      <div role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" class="progress-bar dashbg-3"></div>
-                    </div></a><a href="#" class="dropdown-item">
-                      <div class="text d-flex justify-content-between"><strong>Task 3</strong><span>70% complete</span></div>
-                      <div class="progress">
-                        <div role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar dashbg-2"></div>
-                      </div></a><a href="#" class="dropdown-item">
-                        <div class="text d-flex justify-content-between"><strong>Task 4</strong><span>30% complete</span></div>
-                        <div class="progress">
-                          <div role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar dashbg-4"></div>
-                        </div></a><a href="#" class="dropdown-item">
-                          <div class="text d-flex justify-content-between"><strong>Task 5</strong><span>65% complete</span></div>
-                          <div class="progress">
-                            <div role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" class="progress-bar dashbg-1"></div>
-                          </div></a><a href="#" class="dropdown-item text-center"> <strong>See All Tasks <i class="fa fa-angle-right"></i></strong></a>
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg">
+            <div class="search-panel">
+                <div class="search-inner d-flex align-items-center justify-content-center">
+                    <div class="close-btn">Close <i class="fa fa-close"></i></div>
+                    <form id="searchForm" action="#">
+                        <div class="form-group">
+                            <input type="search" name="search" placeholder="What are you searching for...">
+                            <button type="submit" class="submit">Search</button>
                         </div>
-                      </div>
-                      <!-- Tasks end-->
-                      <!-- Log out               -->
-                      <div class="list-inline-item logout">                   <a id="logout" href="login.html" class="nav-link"> <span class="d-none d-sm-inline">Logout </span><i class="icon-logout"></i></a></div>
-                    </div>
-                  </div>
-                </nav>
-              </header>
-              <div class="d-flex align-items-stretch">
-                <!-- Sidebar Navigation-->
-                <nav id="sidebar">
-                  <!-- Sidebar Header-->
-                  <div class="sidebar-header d-flex align-items-center">
-                    <div class="avatar"><img src="img/avatar-6.jpg" alt="..." class="img-fluid rounded-circle"></div>
-                    <div class="title">
-                      <h1 class="h5" id="userName">Jash Mehta</h1>
-                      <p>Student</p>
-                    </div>
-                  </div>
-                  <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
-                  <ul class="list-unstyled">
-                    <li><a href="index.html"> <i class="icon-home"></i>Home </a></li>
-                    <li class="active"><a href="test.html"> <i class="icon-grid"></i>Tests  </a></li>
-                    <li><a href="tables.html"> <i class="icon-grid"></i>Tables </a></li>
-                    <li><a href="charts.html"> <i class="fa fa-bar-chart"></i>Charts </a></li>
-                    <li><a href="forms.html"> <i class="icon-padnote"></i>Forms </a></li>
-                    <ul id="exampledropdownDropdown" class="collapse list-unstyled ">
-                      <li><a href="#">Page</a></li>
-                      <li><a href="#">Page</a></li>
-                      <li><a href="#">Page</a></li>
-                    </ul>
-                  </li>
-                  <li><a href="login.html"> <i class="icon-logout"></i>Login page </a></li>
-                </ul><span class="heading">Extras</span>
-                <ul class="list-unstyled">
-                  <li> <a href="#"> <i class="icon-settings"></i>Demo </a></li>
-                  <li> <a href="#"> <i class="icon-writing-whiteboard"></i>Demo </a></li>
-                  <li> <a href="#"> <i class="icon-chart"></i>Demo </a></li>
-                </ul>
-              </nav>
-              <!-- Sidebar Navigation end-->
-              <div class="page-content">
-                <div class="page-header">
-                  <div class="container-fluid">
-                    <h2 class="h5 no-margin-bottom">Psychometric Test</h2>
-                  </div>
+                    </form>
                 </div>
-                <section class="no-padding-top no-padding-bottom">
-                  <div class="container-fluid" id="parent">
-                    <div class="row" id="testRow">
-                      <!---------Basic Form--------------------------->
-                      <div class="col-lg-6">
-                        <div class="block">
-                          <div class="title"><strong class="d-block">Question 1</strong><span class="d-block">I feel uncomfortable when I disagree with someone.</span></div>
-                          <div class="block-body">
-                            <form>
-                              <div class="form-group">
-                                <input type="email" placeholder="Strongly Agree" class="form-control is-valid">
-                              </div>
-                              <div class="form-group">       
-                                <input type="password" placeholder="Agree" class="form-control">
-                              </div>
-                              <div class="form-group">       
-                                <input type="password" placeholder="Neutral" class="form-control">
-                              </div>
-                              <div class="form-group">       
-                                <input type="password" placeholder="Disagree" class="form-control">
-                              </div>
-                              <div class="form-group">       
-                                <input type="password" placeholder="Strongly Disagree" class="form-control">
-                              </div>
-                              <div class="form-group">       
-                                <input type="submit" value="Submit" class="btn btn-primary">
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                      <!-- Basic Form-->
-                      
-                      <!-- Horizontal Form-->
-                      <div class="col-lg-6">
-                        <div class="block">
-                          <div class="title"><strong class="d-block">Question 2</strong><span class="d-block">I often question the wisdom of my elders.</span></div>
-                          <div class="block-body">
-                            <form>
-                              <div class="form-group">
-                                <input type="email" placeholder="Strongly Agree" class="form-control">
-                              </div>
-                              <div class="form-group">       
-                                <input type="password" placeholder="Agree" class="form-control">
-                              </div>
-                              <div class="form-group">       
-                                <input type="password" placeholder="Neutral" class="form-control is-valid">
-                              </div>
-                              <div class="form-group">       
-                                <input type="password" placeholder="Disagree" class="form-control">
-                              </div>
-                              <div class="form-group">       
-                                <input type="password" placeholder="Strongly Disagree" class="form-control">
-                              </div>
-                              <div class="form-group">       
-                                <input type="submit" value="Submit" class="btn btn-primary">
-                              </div>
-                            </form>
-                          </div>
-                        </div>
-                      </div>
-                      
-                    </div>
-                    <button id="btn1" class="btn btn-primary">Submit Test</button>
-                    
-                  </div>
-                </section>
-                
-              </div>
             </div>
-            <!-- JavaScript files-->
-            
-            <script>
+            <div class="container-fluid d-flex align-items-center justify-content-between">
+                <div class="navbar-header">
+                    <!-- Navbar Header-->
+                    <a href="index.html" class="navbar-brand">
+                        <div class="brand-text brand-big visible text-uppercase"><strong>Nouristic</strong></div>
+                        <div class="brand-text brand-sm"><strong class="text-primary">D</strong><strong>A</strong></div>
+                    </a>
 
-              const userData=JSON.parse(localStorage.getItem("userData"))
-              if(userData==null){
-                window.location.replace("/distribution/login.html")
-                }
-                const username=document.getElementById("userName")
-                const userEmail=document.getElementById("userEmail")
-                username.innerHTML=userData.user.name
-                userEmail.innerHTML=userData.user.email
+                    <!-- Sidebar Toggle Btn-->
+                    <button class="sidebar-toggle"><i class="fa fa-long-arrow-left"></i></button>
+                </div>
+                <div class="right-menu list-inline no-margin-bottom">
+
+                    <div class="list-inline-item" id="userEmail"></div>
+
+                    <div class="list-inline-item"><a href="#" class="search-open nav-link"><i class="icon-magnifying-glass-browser"></i></a></div>
+                    <!-- Tasks-->
+                    <div class="list-inline-item dropdown"><a id="navbarDropdownMenuLink2" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link tasks-toggle"><i class="icon-new-file"></i><span class="badge dashbg-3">9</span></a>
+                        <div aria-labelledby="navbarDropdownMenuLink2" class="dropdown-menu tasks-list">
+                            <a href="#" class="dropdown-item">
+                                <div class="text d-flex justify-content-between"><strong>Task 1</strong><span>40% complete</span></div>
+                                <div class="progress">
+                                    <div role="progressbar" style="width: 40%" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" class="progress-bar dashbg-1"></div>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <div class="text d-flex justify-content-between"><strong>Task 2</strong><span>20% complete</span></div>
+                                <div class="progress">
+                                    <div role="progressbar" style="width: 20%" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" class="progress-bar dashbg-3"></div>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <div class="text d-flex justify-content-between"><strong>Task 3</strong><span>70% complete</span></div>
+                                <div class="progress">
+                                    <div role="progressbar" style="width: 70%" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" class="progress-bar dashbg-2"></div>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <div class="text d-flex justify-content-between"><strong>Task 4</strong><span>30% complete</span></div>
+                                <div class="progress">
+                                    <div role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar dashbg-4"></div>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item">
+                                <div class="text d-flex justify-content-between"><strong>Task 5</strong><span>65% complete</span></div>
+                                <div class="progress">
+                                    <div role="progressbar" style="width: 65%" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100" class="progress-bar dashbg-1"></div>
+                                </div>
+                            </a>
+                            <a href="#" class="dropdown-item text-center"> <strong>See All Tasks <i class="fa fa-angle-right"></i></strong></a>
+                        </div>
+                    </div>
+                    <!-- Tasks end-->
+                    <!-- Log out               -->
+                    <div class="list-inline-item logout">
+                        <a id="logout" href="login.html" class="nav-link"> <span class="d-none d-sm-inline">Logout </span><i class="icon-logout"></i></a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <div class="d-flex align-items-stretch">
+        <!-- Sidebar Navigation-->
+        <nav id="sidebar">
+            <!-- Sidebar Header-->
+            <div class="sidebar-header d-flex align-items-center">
+                <div class="avatar"><img src="img/avatar-6.jpg" alt="..." class="img-fluid rounded-circle"></div>
+                <div class="title">
+                    <h1 class="h5">Jash Mehta</h1>
+                    <p>Fighter</p>
+                </div>
+            </div>
+            <!-- Sidebar Navidation Menus--><span class="heading">Main</span>
+            <ul class="list-unstyled">
+                <li>
+                    <a href="index.html"> <i class="icon-home"></i>Home </a>
+                </li>
+                <li>
+                    <a href="forms.html"> <i class="icon-padnote"></i>Flagged Players </a>
+                </li>
+                <li class="active">
+                    <a href="test.html"> <i class="icon-grid"></i>Blood Test </a>
+                </li>
+                <li>
+                    <a href="charts.html"> <i class="fa fa-bar-chart"></i>Blockchain</a>
+                </li>
+                <li>
+                    <a href="login.html"> <i class="icon-logout"></i>Login page </a>
+                </li>
+        </nav>
+        <!-- Sidebar Navigation end-->
+        <div class="page-content">
+            <div class="page-header">
+                <div class="container-fluid">
+                    <h2 class="h5 no-margin-bottom ml-2">Blood Test</h2>
+                </div>
+            </div>
+            <section class="no-padding-top no-padding-bottom">
+                <div class="container-fluid" id="parent">
+                    <div class="row" id="testRow">
+                        <!-- Horizontal Form-->
+                        <div class="col-lg-6">
+                            <div class="block">
+                                <div class="title"><strong class="d-block"></strong><span class="d-block"></span></div>
+                                <div class="block-body">
+                                    <form class="form-horizontal">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 form-control-label">HCT haematocrit</label>
+                                            <div class="col-sm-9">
+                                                <input id="inputHorizontalSuccess" type="email" placeholder="in %" class="form-control form-control-success"><small class="form-text"></small>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 form-control-label">HGB haemoglobin</label>
+                                            <div class="col-sm-9">
+                                                <input id="inputHorizontalWarning" type="password" placeholder="g/dL" class="form-control form-control-warning"><small class="form-text"></small>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 form-control-label">IRF fraction</label>
+                                            <div class="col-sm-9">
+                                                <input id="inputHorizontalSuccess" type="email" placeholder="in %" class="form-control form-control-success"><small class="form-text"></small>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 form-control-label">MCHC</label>
+                                            <div class="col-sm-9">
+                                                <input id="inputHorizontalSuccess" type="email" placeholder="in g/dL" class="form-control form-control-success"><small class="form-text"></small>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Horizontal Form-->
+                        <div class="col-lg-6">
+                            <div class="block">
+                                <div class="title"><strong class="d-block"></strong><span class="d-block"></span></div>
+                                <div class="block-body">
+                                    <form class="form-horizontal">
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 form-control-label">MCV </label>
+                                            <div class="col-sm-9">
+                                                <input id="inputHorizontalSuccess" type="email" placeholder="in fL" class="form-control form-control-success"><small class="form-text"></small>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 form-control-label">RBC count</label>
+                                            <div class="col-sm-9">
+                                                <input id="inputHorizontalWarning" type="password" placeholder="10^6/uL" class="form-control form-control-warning"><small class="form-text"></small>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 form-control-label">RBC width</label>
+                                            <div class="col-sm-9">
+                                                <input id="inputHorizontalSuccess" type="email" placeholder="in fL" class="form-control form-control-success"><small class="form-text"></small>
+                                            </div>
+                                        </div>
+                                        <div class="form-group row">
+                                            <label class="col-sm-3 form-control-label">RETC count</label>
+                                            <div class="col-sm-9">
+                                                <input id="inputHorizontalSuccess" type="email" placeholder="10^6/uL" class="form-control form-control-success"><small class="form-text"></small>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <button id="btn123" class="btn btn-primary">Submit Test</button>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <!-- JavaScript files-->
+
+    <script>
+        const resultButton = getElementById("btn123").addEventListener("onClick", () => {
+
+        })
+        const userData = JSON.parse(localStorage.getItem("userData"))
+        if (userData == null) {
+            window.location.replace("/distribution/login.html")
+        }
+        const username = document.getElementById("userName")
+        const userEmail = document.getElementById("userEmail")
+        username.innerHTML = userData.user.name
+        userEmail.innerHTML = userData.user.email
 
 
-          
-              const fetchTest=async()=>{
-                try{
-                  
-                  
-                  const data1=await fetch("http://localhost:8000/qapi/question ")
-                  const res1=await data1.json()
-                  console.log(res1)
-                  const parent=document.getElementById("parent")
-                  parent.innerHTML=""
-                  
-                  res1.forEach((ele,i)=>{
-                    var heading=ele.questionType
-                    var questions=ele.questions
-                    const row=document.createElement("div")
-                    row.setAttribute("class","row")
-                    row.setAttribute("id",`row${i}`)
-                    row.innerHTML+=`<div class="col-lg-12">
+
+        const fetchTest = async() => {
+            try {
+
+
+                const data1 = await fetch("http://localhost:8000/qapi/question ")
+                const res1 = await data1.json()
+                console.log(res1)
+                const parent = document.getElementById("parent")
+                parent.innerHTML = ""
+
+                res1.forEach((ele, i) => {
+                    var heading = ele.questionType
+                    var questions = ele.questions
+                    const row = document.createElement("div")
+                    row.setAttribute("class", "row")
+                    row.setAttribute("id", `row${i}`)
+                    row.innerHTML += `<div class="col-lg-12">
                       <h2 class="text-primary">${heading}</h2>
                     </div>`
-                    questions.forEach((element,index)=>{
-                      const div=`
+                    questions.forEach((element, index) => {
+                        const div = `
                       <div class="col-lg-6">
                         <div class="block">
                           <div class="title fs-4"><strong class="d-block">Question</strong><span class="d-block">${element}</span></div>
@@ -261,139 +288,137 @@
                       </div>
                       
                       `
-                      row.innerHTML+=div
+                        row.innerHTML += div
                     })
                     parent.appendChild(row)
-                  })
-                  const button=document.createElement("button")
-                  button.setAttribute("class","btn btn-primary")
-                  button.setAttribute("id","btnSubmit")
-                  button.innerHTML="Submit"
-                  button.addEventListener("click",submitHandler)
-                  parent.appendChild(button)
-                  
-                }
-                catch(err){
-                  console.log(err)
-                }
-              }
-              
-              fetchTest()
-              
-            function submitHandler(e){
-                var ei=0
-                var sn=0
-                var tn=0
-                var jp=0
-                
-                e.preventDefault()
-                
-                document.querySelectorAll("input[name='radioEI']:checked").forEach(ele=>{
-                  const ans=ele.value
-                  console.log(ans)
-                  if(ans=="coolpa")ei+=1
-                  if(ans=="agree")ei+=3
-                  if(ans=="disagree")ei =ei-3
                 })
-                
-                
-                document.querySelectorAll("input[name='radioSN']:checked").forEach(ele=>{
-                  const ans=ele.value
-                  console.log(ans)
-                  if(ans=="coolpa")sn+=1
-                  if(ans=="agree")sn+=3
-                  if(ans=="disagree")sn =sn-3
+                const button = document.createElement("button")
+                button.setAttribute("class", "btn btn-primary")
+                button.setAttribute("id", "btnSubmit")
+                button.innerHTML = "Submit"
+                button.addEventListener("click", submitHandler)
+                parent.appendChild(button)
+
+            } catch (err) {
+                console.log(err)
+            }
+        }
+
+        fetchTest()
+
+        function submitHandler(e) {
+            var ei = 0
+            var sn = 0
+            var tn = 0
+            var jp = 0
+
+            e.preventDefault()
+
+            document.querySelectorAll("input[name='radioEI']:checked").forEach(ele => {
+                const ans = ele.value
+                console.log(ans)
+                if (ans == "coolpa") ei += 1
+                if (ans == "agree") ei += 3
+                if (ans == "disagree") ei = ei - 3
+            })
+
+
+            document.querySelectorAll("input[name='radioSN']:checked").forEach(ele => {
+                const ans = ele.value
+                console.log(ans)
+                if (ans == "coolpa") sn += 1
+                if (ans == "agree") sn += 3
+                if (ans == "disagree") sn = sn - 3
+            })
+
+
+            document.querySelectorAll("input[name='radioTN']:checked").forEach(ele => {
+                const ans = ele.value
+                console.log(ans)
+                if (ans == "coolpa") tn += 1
+                if (ans == "agree") tn += 3
+                if (ans == "disagree") tn = tn - 3
+            })
+
+
+            document.querySelectorAll("input[name='radioJP']:checked").forEach(ele => {
+                const ans = ele.value
+                console.log(ans)
+                if (ans == "coolpa") jp += 1
+                if (ans == "agree") jp += 3
+                if (ans == "disagree") jp = jp - 3
+                console.log(jp)
+            })
+            var result = ""
+            if (ei < 0) result += "I"
+            else result += "E"
+
+            if (sn < 0) result += "N"
+            else result += "S"
+
+
+            if (tn < 0) result += "N"
+            else result += "T"
+
+
+            if (jp < 0) result += "P"
+            else result += "J"
+
+            console.log(result)
+            const obj = {
+                result: result,
+                email: userData.user.email,
+                id: userData.user._id
+            }
+
+            fetch("http://localhost:8000/resultapi/result", {
+                    method: 'POST',
+                    headers: new Headers({
+                        "Content-type": "application/json"
+                    }),
+                    body: JSON.stringify(obj)
                 })
-                
-                
-                document.querySelectorAll("input[name='radioTN']:checked").forEach(ele=>{
-                  const ans=ele.value
-                  console.log(ans)
-                  if(ans=="coolpa")tn+=1
-                  if(ans=="agree")tn+=3
-                  if(ans=="disagree")tn =tn-3
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data)
+                    alert("Thank for completing the test!!")
                 })
-                
-                
-                document.querySelectorAll("input[name='radioJP']:checked").forEach(ele=>{
-                  const ans=ele.value
-                  console.log(ans)
-                  if(ans=="coolpa")jp+=1
-                  if(ans=="agree")jp+=3
-                  if(ans=="disagree")jp =jp-3
-                  console.log(jp)
-                })
-                var result=""
-                if(ei<0)result+="I"
-                else result+="E"
-                
-                if(sn<0)result+="N"
-                else result+="S"
-                
-                
-                if(tn<0)result+="N"
-                else result+="T"
-                
-                
-                if(jp<0)result+="P"
-                else result+="J"
-                
-                console.log(result)
-                const obj={
-                  result:result,
-                  email:userData.user.email,
-                  id:userData.user._id
-                }
-                
-                fetch("http://localhost:8000/resultapi/result",{
-                  method:'POST',
-                  headers:new Headers({
-                    "Content-type":"application/json"
-                  }),
-                  body:JSON.stringify(obj)
-                })
-                .then(res=>res.json())
-                .then(data=>{
-                  console.log(data)
-                  alert("Thank for completing the test!!")
-                })
-                .catch(err=>console.log(err))
-                
-              }
-              
-              
-              
-              
-            </script>
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            
-            <script src="vendor/jquery/jquery.min.js"></script>
-            <script src="vendor/popper.js/umd/popper.min.js"> </script>
-            <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-            <script src="vendor/jquery.cookie/jquery.cookie.js"> </script>
-            <script src="vendor/chart.js/Chart.min.js"></script>
-            <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
-            <script src="js/charts-home.js"></script>
-            <script src="js/front.js"></script>
-          </body>
-          </html>
+                .catch(err => console.log(err))
+
+        }
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/popper.js/umd/popper.min.js">
+    </script>
+    <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendor/jquery.cookie/jquery.cookie.js">
+    </script>
+    <script src="vendor/chart.js/Chart.min.js"></script>
+    <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
+    <script src="js/charts-home.js"></script>
+    <script src="js/front.js"></script>
+</body>
+
+</html>
