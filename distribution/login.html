@@ -136,12 +136,73 @@
               console.log('hi');
               console.log(data);
               localStorage.setItem('userData', JSON.stringify(data));
+              console.log(userData)
+              console.log(data)
+            if(userData.email=="admin1234@gmail.com"){
+              window.location.replace("/distribution/admin.html")
+            }
+            else{
               window.location.replace('/distribution');
+            }
+            
             } else {
               console.log(data.error);
             }
           });
       });
+
+
+      const jay=async()=>{
+          const formdata=new FormData()
+          formdata.append("name","Thiago Tavares")
+          try{
+            const fetchData=await fetch("http://127.0.0.1:5000/player_data",{
+      method:'POST',
+      body:formdata
+    })
+    const data=await fetchData.json()
+    console.log(data)
+          }
+          catch(err){
+            console.log(err)
+          }
+        }
+
+        jay()
+
+
+
+        const jay2=async()=>{
+          const formdata=new FormData()
+          formdata.append("hct",25)
+          formdata.append("hgb",25)
+          formdata.append("irf",25)
+          formdata.append("mch",25)
+          formdata.append("mchc",25)
+          formdata.append("mcv",25)
+          formdata.append("rbc",25)
+          formdata.append("rdw",25)
+          formdata.append("retc",25)
+          formdata.append("retp",25)
+          try{
+            const fetchData=await fetch("http://127.0.0.1:5050/mine_block",{
+      method:'POST',
+      body:formdata
+    })
+    const data=await fetchData.json()
+    console.log(data)
+          }
+          catch(err){
+            console.log(err)
+          }
+        }
+
+        jay2()
+
+
+
+
+
     </script>
 
     <script src="vendor/jquery/jquery.min.js"></script>
