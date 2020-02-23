@@ -130,13 +130,13 @@
                 <li>
                     <a href="index.html"> <i class="icon-home"></i>Home </a>
                 </li>
-                <li>
-                    <a href="flaggedPlayer.html"> <i class="icon-padnote"></i>Flagged Players </a>
+                <li class="active">
+                    <a href="forms.html"> <i class="icon-padnote"></i>Flagged Players </a>
                 </li>
                 <li>
                     <a href="test.html"> <i class="icon-grid"></i>Blood Test </a>
                 </li>
-                <li class="active">
+                <li>
                     <a href="charts.html"> <i class="fa fa-bar-chart"></i>Blockchain</a>
                 </li>
                 <li>
@@ -145,42 +145,71 @@
         </nav>
         <!-- Sidebar Navigation end-->
         <div class="page-content">
-            <div class="page-header">
-                <div class="container-fluid">
-                    <h2 class="h5 no-margin-bottom ml-2">Blockchain</h2>
+            <div class="page-header"style="background-color: #22252A;">
+                <div class="container-fluid" >
+                    <h2 class="h5 mb-4 ml-2">Flagged Players</h2>
                 </div>
-            </div>
-            <section>
-                <div class="row" id="outputData">
-                    <div class="col-md-8 col-sm-8">
-                        <div class="statistic-block block">
-                            <div class="progress-details d-flex align-items-end justify-content-between">
-                                <div class="text" id="index" style="font-size: 50px; font-weight:bold">1</div>
-                                <div class="title">
-                                    <strong>Hash Contents</strong>
+                    <section id="team" class="pb-5">
+                        <div class="container">
+                            <div class="row" id="result">
+                                <!-- Team member -->
+                                <div class="col-xs-6 col-sm-6 col-md-4     ">
+                                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                                        <div class="mainflip">
+                                            <div class="frontside">
+                                                <div class="card">
+                                                    <div class="card-body text-center">
+                                                        <p><img class=" img-fluid" src="./img/my.jpg" alt="card image"></p>
+                                                        <h4 class="card-title" id="playerName"></h4>
+                                                        <p class="card-text" id="playerEmail"></p>
+                                                        <p class="card-text" id="playerDoping"></p>
+                                                        <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="backside">
+                                                <div class="card">
+                                                    <div class="card-body text-center mt-4">
+                                                        <h4 class="card-title"></h4>
+                                                        <p class="card-text">He is one of the most dangerous players of UFC. Head kick is one of his favourite and deadliest move. Be aware of his agility and enjoy fighting against him. </p>
+                                                        <ul class="list-inline">
+                                                            <li class="list-inline-item">
+                                                                <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                                    <i class="fa fa-facebook"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                                    <i class="fa fa-twitter"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                                    <i class="fa fa-skype"></i>
+                                                                </a>
+                                                            </li>
+                                                            <li class="list-inline-item">
+                                                                <a class="social-icon text-xs-center" target="_blank" href="#">
+                                                                    <i class="fa fa-google"></i>
+                                                                </a>
+                                                            </li>
+                                                        </ul>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="number dashtext-1" id="proof">929</div>
-                            </div>
-                        </br>
-                            <div class="text" id="previous_hash"><strong>Previous Hash:</strong>sd444c1c62345d262bb0d291320e25d87c3c178b663ee2</div>
-                        </br>
-                            <div class="text" id="timestamp"><strong>Time Stamp:</strong>2020-02-22 21:54:41.068430+05:30</div>
-                            <div class="progress progress-template">
-                                <div role="progressbar" style="width: 100%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-1"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                </section>
+            </div>
+            <!-- Breadcrumb-->
         </div>
-
-
     </div>
-    <!-- JavaScript files-->
+
 
     <script>
-        
-        const userData = JSON.parse(localStorage.getItem("userData"))
+
+const userData = JSON.parse(localStorage.getItem("userData"))
         if (userData == null) {
             window.location.replace("/distribution/login.html")
         }
@@ -190,83 +219,54 @@
         userEmail.innerHTML = userData.user.email
 
 
-
-    const fetchData=async()=>{
-        try{
-    const fetchData=await fetch("http://127.0.0.1:5050/get_chain")
-    const data=await fetchData.json()
-    console.log(data)
-    renderData(data)
+        const fetchPlayer=async ()=>{
+            const user=await fetch("http://localhost:8000/player")
+            const data=await user.json()
+            console.log(data)
+            getPlayer(data)
         }
-        catch(err){
-            console.log(err)
+        fetchPlayer()
+
+       function getPlayer(data){
+           const result= document.getElementById("result")
+           result.innerHTML=''
+           data.forEach(ele=>{
+               const div=`
+               
+               <div class="col-xs-6 col-sm-6 col-md-4 ">
+                                    <div class="image-flip" ontouchstart="this.classList.toggle('hover');">
+                                        <div class="mainflip">
+                                            <div class="frontside">
+                                                <div class="card">
+                                                    <div class="card-body text-center">
+                                                        <p><img class=" img-fluid" src="./img/my.jpg" alt="card image"></p>
+                                                        <h4 class="card-title" id="playerName">${ele.name}</h4>
+                                                        <p class="card-text" id="playerEmail">${ele.email}</p>
+                                                        <p class="card-text" id="playerDoping">${ele.dopValue}</p>
+                                                        <a href="#" class="btn btn-primary btn-sm"><i class="fa fa-plus"></i></a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="backside">
+                                                <div class="card">
+                                                    <div class="card-body text-center mt-4">
+                                                        <h4 class="card-title"></h4>
+                                                        <p class="card-text">He is one of the most dangerous players of UFC. Head kick is one of his favourite and deadliest move. Be aware of his agility and enjoy fighting against him. </p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+               
+               `
+               result.innerHTML+=div
+           })
+            console.log(data)
         }
-    }
-    fetchData()
-
-    function renderData(data){
-        console.log("hisfd")
-        const output=document.getElementById("outputData")
-        output.innerHTML=""
-        data.chain.forEach(element => {
-            console.log("hi")
-            const div=document.createElement("div")
-            div.setAttribute("class","col-md-8 col-sm-8")
-        
-            div.innerHTML=`
-                        <div class="statistic-block block">
-                            <div class="progress-details d-flex align-items-end justify-content-between">
-                                <div class="text" id="index" style="font-size: 50px; font-weight:bold">${element.index}</div>
-                                <div class="title">
-                                    <strong>Hash Contents</strong>
-                                </div>
-                                <div class="number dashtext-1" id="proof">${element.proof}</div>
-                            </div>
-                        </br>
-                            <div class="text" id="previous_hash"><strong>Previous Hash:</strong>${element.previous_hash}</div>
-                        </br>
-                            <div class="text" id="timestamp"><strong>Time Stamp:</strong>${element.timestamp}</div>
-                            <div class="progress progress-template">
-                                <div role="progressbar" style="width: 100%" aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" class="progress-bar progress-bar-template dashbg-1"></div>
-                            </div>
-                        </div>
-                  
-            
-            `
-            output.appendChild(div)
-        });
-
-        
-    }
-
-
-
-
 
 
     </script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- JavaScript files-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/popper.js/umd/popper.min.js">
     </script>
@@ -275,7 +275,6 @@
     </script>
     <script src="vendor/chart.js/Chart.min.js"></script>
     <script src="vendor/jquery-validation/jquery.validate.min.js"></script>
-    <script src="js/charts-home.js"></script>
     <script src="js/front.js"></script>
 </body>
 

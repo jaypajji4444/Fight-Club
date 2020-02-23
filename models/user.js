@@ -33,7 +33,9 @@ const userScheama = new mongoose.Schema(
             type:Number
         },
         result:[String],
-        fieldSuggested:[String]
+        fieldSuggested:[String],
+        isFlagged:Boolean,
+        dopValue:Number
         
     },
     { timestamps: true }

@@ -3,7 +3,7 @@ const express=require("express");
 const app= express();
  const bodyParser=require('body-parser');
  const cors=require("cors")
-
+const User=require("./models/user")
  //require("dotenv").config()
 app.use(cors())
 const mongoose=require("mongoose");
@@ -37,6 +37,32 @@ const resultRoutes=require("./routes/result")
 app.use('/api', authRoutes);
 app.use("/qapi",questionRoutes)
 app.use("/resultapi",resultRoutes)
+
+
+
+app.post("/player",(req,res)=>{
+    User.findOne({_id:req.body.id})
+    .then(user=>{
+        console.log(req.body)
+        user.isFlagged=req.body.flag
+        user.dopValue=req.body.value
+        user.save()
+        res.status(200).json(user)
+    })
+   console.log("hi")
+   
+})
+
+app.get("/player",async(req,res)=>{
+    try{
+        const users=await User.find({isFlagged:true})
+    
+        res.status(200).json(users)
+    }
+    catch(err){
+        res.status(401).json(err)
+    }
+})
 // app.use(function (req, res, next) {
 //     res.setHeader('Access-Control-Allow-Origin', '*'); //// Website you wish to allow to connect   
 //     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');  // methods to allowed  

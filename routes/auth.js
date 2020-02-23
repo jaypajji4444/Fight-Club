@@ -11,4 +11,5 @@ const { runValidation } = require('../validators');
 router.post('/signup', userSignupValidator, runValidation, signup);
 router.post('/signin', userSigninValidator, runValidation, signin);
 
+
 module.exports = router;
