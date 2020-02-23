@@ -74,14 +74,14 @@ def r_function():
     vector=np.asarray(r_df)
     #print(type(vector))
     if(float(vector[0])>0):
-        account_sid = 'ACa4070a18414f37598009acb9c35c6b3b'
-        auth_token = '2d049fff4df6f272fbe88d1846e9ab01'
+        account_sid = #####Add your credentials
+        auth_token = #####Add your credentials
         client = Client(account_sid, auth_token)
 
         message = client.messages.create(
-        from_='whatsapp:+14155238886',
+        from_='#########',
         body='Uh oh! You just got tagged for doping!',
-        to='whatsapp:+919757199266'
+        to='#########'
         )
 
         print(message.sid)
