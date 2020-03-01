@@ -20,8 +20,6 @@
 ```shell
 ./run.sh
 
-## Starting app
-npm start
 
 ```
 
