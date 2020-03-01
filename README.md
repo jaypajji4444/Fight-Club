@@ -18,14 +18,7 @@
 ## Installation
 
 ```shell
-cd loc
-pip install -r requirements.txt
-flask run
-cd ..
-cd pyblock
-pip install -r requirements.txt
-flask run --port 5050
-cd ..
+./run.sh
 
 ## Starting app
 npm start
