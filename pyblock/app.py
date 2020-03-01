@@ -5,6 +5,11 @@ import json
 import pytz
 from flask_cors import CORS,cross_origin
 
+def shutdown_server():
+    func = request.environ.get('werkzeug.server.shutdown')
+    if func is None:
+        raise RuntimeError('Not running with the Werkzeug Server')
+    func()
 
 class Blockchain:
     def __init__(self):
@@ -65,6 +70,10 @@ CORS(app, support_credentials=True)
 
 blockchain = Blockchain()
 
+@app.route('/shutdown', methods=['GET'])
+def shutdown():
+    shutdown_server()
+    return 'Server shutting down...'
 
 @app.route('/mine_block',methods=['POST'])
 def mine_block():
@@ -92,6 +101,10 @@ def mine_block():
         'previous_hash': block['previous_hash']
     }
     return jsonify(chain1), 200
+
+@app.route('/')
+def hello():
+    return('Hello World')
 
 
 @app.route('/get_chain',methods = ['GET'])
