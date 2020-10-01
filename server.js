@@ -26,8 +26,6 @@ app.use(bodyParser.urlencoded({extended:true}))
 
 // import routes
 const authRoutes = require('./routes/auth');
-const questionRoutes=require("./routes/question")
-const resultRoutes=require("./routes/result")
 
 // middleware added
  app.use("/",express.static("Knight"))
@@ -35,21 +33,22 @@ const resultRoutes=require("./routes/result")
 
 
 app.use('/api', authRoutes);
-app.use("/qapi",questionRoutes)
-app.use("/resultapi",resultRoutes)
+
 
 
 
 app.post("/player",(req,res)=>{
     User.findOne({_id:req.body.id})
     .then(user=>{
-        console.log(req.body)
         user.isFlagged=req.body.flag
         user.dopValue=req.body.value
         user.save()
         res.status(200).json(user)
     })
-   console.log("hi")
+    .catch(err=>{
+        console.log(err)
+    })
+ 
    
 })
 

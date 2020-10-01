@@ -61,9 +61,28 @@ def r_function():
     }
     """
     rfunc = robjects.r(rstring)
-    r_df = rfunc(1,2,3,4,5,6,7)
-    print(r_df)
-    return jsonify('Done')
+
+=======
+    
+    r_df = rfunc(hct,hgb,mch,mchc,mcv,rbc,retp)
+    #pd.rpy2.common.convert_robj(r_df)
+    vector=np.asarray(r_df)
+    #print(type(vector))
+    if(float(vector[0])>0):
+        account_sid = #####Add your credentials
+        auth_token = #####Add your credentials
+        client = Client(account_sid, auth_token)
+
+        message = client.messages.create(
+        from_='#########',
+        body='Uh oh! You just got tagged for doping!',
+        to='#########'
+        )
+
+        print(message.sid)
+    return jsonify({'value':float(vector[0])})
+
+
 
 
 if __name__ == '__main__':
