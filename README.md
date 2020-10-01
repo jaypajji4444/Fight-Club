@@ -1,4 +1,4 @@
-# Digital_Chaos-Fight Club
+# Digital Chaos-Fight Club
 
 >This is an online service created by team Digital Chaos for UFC fighters and admin, which provides an in-depth view on how the fighters have to improve their game and also the administration can check players for doping using Blockchain and Machine Learning.
 
@@ -19,6 +19,8 @@ https://youtu.be/dAgrcTNxHO4
 ## Installation
 
 ```shell
+
+=======
 cd loc
 pip install -r requirements.txt
 flask run
