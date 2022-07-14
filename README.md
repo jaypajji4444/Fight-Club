@@ -18,7 +18,7 @@ https://youtu.be/dAgrcTNxHO4
 
 ## Installation
 
-```shell
+```
 
 =======
 cd loc
